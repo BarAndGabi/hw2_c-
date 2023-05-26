@@ -36,3 +36,16 @@ C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\MyDB_log.ldf
 C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\Q.exe.config
 C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\Q.exe
 C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\Q.pdb
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\MyDB.mdf
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\MyDB_log.ldf
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\Q.exe.config
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\Q.exe
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\Q.pdb
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.csproj.AssemblyReference.cache
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.csproj.SuggestedBindingRedirects.cache
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.DB_form.resources
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.Properties.Resources.resources
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.csproj.GenerateResource.cache
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.csproj.CoreCompileInputs.cache
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.exe
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.pdb

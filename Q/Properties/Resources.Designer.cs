@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Q.Properties
+namespace hw_2.Properties
 {
 
 
