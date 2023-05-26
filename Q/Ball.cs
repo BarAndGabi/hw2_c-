@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Q
+namespace hw_2
 {
     internal class Ball
     {
@@ -34,12 +34,6 @@ namespace Q
         {
             Console.WriteLine($"Ball: Size={Size}, Color={Color}, Position=({X}, {Y})");
         }
-        public void Draw()
-        {
-            Console.WriteLine($"Drawing ball at ({X}, {Y})");
-
-
-
-        }
+    
     }
 }
