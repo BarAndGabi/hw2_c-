@@ -1,0 +1,38 @@
+C:/Users/afeka/Desktop/Q/Q/bin/Debug/MyDB.mdf
+C:/Users/afeka/Desktop/Q/Q/bin/Debug/MyDB_log.ldf
+C:/Users/afeka/Desktop/Q/Q/bin/Debug/Q.exe.config
+C:/Users/afeka/Desktop/Q/Q/bin/Debug/Q.exe
+C:/Users/afeka/Desktop/Q/Q/bin/Debug/Q.pdb
+C:/Users/afeka/Desktop/Q/Q/obj/Debug/Q.csproj.AssemblyReference.cache
+C:/Users/afeka/Desktop/Q/Q/obj/Debug/Q.csproj.SuggestedBindingRedirects.cache
+C:/Users/afeka/Desktop/Q/Q/obj/Debug/Q.Form1.resources
+C:/Users/afeka/Desktop/Q/Q/obj/Debug/Q.Properties.Resources.resources
+C:/Users/afeka/Desktop/Q/Q/obj/Debug/Q.csproj.GenerateResource.cache
+C:/Users/afeka/Desktop/Q/Q/obj/Debug/Q.csproj.CoreCompileInputs.cache
+C:/Users/afeka/Desktop/Q/Q/obj/Debug/Q.exe
+C:/Users/afeka/Desktop/Q/Q/obj/Debug/Q.pdb
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/bin/Debug/MyDB.mdf
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/bin/Debug/MyDB_log.ldf
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/bin/Debug/Q.exe.config
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/bin/Debug/Q.exe
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/bin/Debug/Q.pdb
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/obj/Debug/Q.csproj.AssemblyReference.cache
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/obj/Debug/Q.Form1.resources
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/obj/Debug/Q.Properties.Resources.resources
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/obj/Debug/Q.csproj.GenerateResource.cache
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/obj/Debug/Q.csproj.CoreCompileInputs.cache
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/obj/Debug/Q.exe
+/Users/barmoshe/Downloads/18 - 21.05.2023/Q3 (DB with linq to sql)/Q/obj/Debug/Q.pdb
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\obj\Debug\Q.csproj.AssemblyReference.cache
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\obj\Debug\Q.csproj.SuggestedBindingRedirects.cache
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\obj\Debug\Q.Form1.resources
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\obj\Debug\Q.Properties.Resources.resources
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\obj\Debug\Q.csproj.GenerateResource.cache
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\obj\Debug\Q.csproj.CoreCompileInputs.cache
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\obj\Debug\Q.exe
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\obj\Debug\Q.pdb
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\MyDB.mdf
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\MyDB_log.ldf
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\Q.exe.config
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\Q.exe
+C:\Users\bar.moshe\Downloads\Q3 (DB with linq to sql)\Q\bin\Debug\Q.pdb
