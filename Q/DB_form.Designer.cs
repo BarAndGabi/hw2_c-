@@ -226,7 +226,7 @@
             this.Controls.Add(this.TblDataGridView);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DB_form";
-            this.Text = "Form1";
+            this.Text = "hw2_db_form";
             this.Load += new System.EventHandler(this.DB_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TblDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TblBindingNavigator)).EndInit();
