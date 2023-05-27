@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace hw2
+namespace Q
 {
     public partial class main_form : Form
     {
@@ -18,18 +18,19 @@ namespace hw2
             InitializeComponent();
         }
 
-       //when pressed open db form
+        //when pressed open db form
         private void DB_Click(object sender, EventArgs e)
         {
-         DB_form db = new DB_form();
-        db.ShowDialog();
+            DB_form db = new DB_form();
+            db.ShowDialog();
         }
 
         private void E_Click(object sender, EventArgs e)
         {
-            //exit program
-            this.Close();
-
+            if (MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+            {
+                this.Close();
+            }
 
         }
     }

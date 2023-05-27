@@ -14,4 +14,4 @@ C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.pdb
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\DB_form.resx
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\DB_form.cs
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\DB_form.Designer.cs
-C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\hw2.main_form.resources
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.main_form.resources

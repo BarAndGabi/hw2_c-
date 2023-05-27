@@ -1,4 +1,4 @@
-﻿namespace hw2
+﻿namespace Q
 {
     partial class main_form
     {
