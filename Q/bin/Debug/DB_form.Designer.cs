@@ -1,4 +1,4 @@
-﻿namespace hw_2
+﻿namespace Q
 {
     partial class DB_form
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace hw_2
+namespace Q
 {
     internal class Ball
     {

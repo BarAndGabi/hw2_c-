@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace hw_2
+namespace Q
 {
 
     public partial class DB_form : Form

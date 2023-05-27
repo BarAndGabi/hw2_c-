@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace hw_2.Properties {
+namespace Q.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
