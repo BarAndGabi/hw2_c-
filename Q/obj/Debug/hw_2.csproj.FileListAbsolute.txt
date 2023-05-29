@@ -5,6 +5,7 @@ C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\Q.exe
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\Q.pdb
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\hw_2.csproj.AssemblyReference.cache
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\hw_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\hw_2.DB_form.resources
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.Properties.Resources.resources
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\hw_2.csproj.GenerateResource.cache
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\hw_2.csproj.CoreCompileInputs.cache
@@ -14,4 +15,3 @@ C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\DB_form.resx
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\DB_form.cs
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\bin\Debug\DB_form.Designer.cs
 C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.main_form.resources
-C:\Users\pc\Documents\GitHub\hw2_c-\Q\obj\Debug\Q.DB_form.resources

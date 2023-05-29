@@ -87,7 +87,6 @@
     <EmbeddedResource Include="DB_form.resx">
       <DependentUpon>DB_form.cs</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="main_form.resx">
       <DependentUpon>main_form.cs</DependentUpon>

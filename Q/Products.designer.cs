@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Q
+namespace hw_2
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -36,7 +36,7 @@ namespace Q
     #endregion
 		
 		public ProductsDataContext() : 
-				base(global::Q.Properties.Settings.Default.MyDBConnectionString, mappingSource)
+				base(global::hw_2.Properties.Settings.Default.MyDBConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
