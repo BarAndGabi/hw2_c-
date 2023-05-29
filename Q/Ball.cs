@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace hw_2
 {
@@ -13,6 +14,7 @@ namespace hw_2
         public string Color { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
+        private Form main;
 
         // Constructor
         public Ball(int size, string color, int x, int y)
@@ -23,6 +25,11 @@ namespace hw_2
             Y = y;
         }
 
+        public Ball(Form main)
+        {
+            this.main = main;
+        }
+
         // Methods
         public void Move(int deltaX, int deltaY)
         {
@@ -30,10 +37,14 @@ namespace hw_2
             Y += deltaY;
         }
 
-        public void Display()
+        public void addToDisplay()
         {
             Console.WriteLine($"Ball: Size={Size}, Color={Color}, Position=({X}, {Y})");
         }
-    
+
+        internal void removeFromDisplay()
+        {
+           // throw new NotImplementedException();
+        }
     }
 }
