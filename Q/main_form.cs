@@ -78,7 +78,8 @@ namespace Q
 
         private void changeBallsCount(int choise)
         {
-            switch(choise)
+            printBallList();
+            switch (choise)
             {
                 case 1:
                     this.ball_count++;
@@ -118,5 +119,17 @@ namespace Q
             this.removeBall();
 
         }
+
+        //func to print ball list to text file
+        private void printBallList()
+        {
+            System.IO.StreamWriter file = new System.IO.StreamWriter("ball_list.txt");
+            foreach (Ball ball in this.ball_list)
+            {
+                file.WriteLine(ball.ToString());
+            }
+            file.Close();
+        }
+    
     }
 }

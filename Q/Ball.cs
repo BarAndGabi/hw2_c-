@@ -28,6 +28,7 @@ namespace hw_2
         public Ball(Form main)
         {
             this.main = main;
+            this.randomizeBall();
         }
 
         // Methods
@@ -36,7 +37,22 @@ namespace hw_2
             X += deltaX;
             Y += deltaY;
         }
-
+        public void randomizeBall()
+        {
+            Random rnd = new Random();
+            this.Size = rnd.Next(10, 100);
+            this.randomColor();
+            this.X = rnd.Next(0, main.Width);
+            this.Y = rnd.Next(0, main.Height);
+        }
+        public void randomColor()
+        {
+            Random rnd = new Random();
+            int r = rnd.Next(0, 255);
+            int g = rnd.Next(0, 255);
+            int b = rnd.Next(0, 255);
+            this.Color = $"#{r:X2}{g:X2}{b:X2}";
+        }
         public void addToDisplay()
         {
             Console.WriteLine($"Ball: Size={Size}, Color={Color}, Position=({X}, {Y})");
@@ -45,6 +61,12 @@ namespace hw_2
         internal void removeFromDisplay()
         {
            // throw new NotImplementedException();
+        }
+
+        //tosring override
+        public override string ToString()
+        {
+            return $"\n------Ball------ \nSize={Size} \nColor={Color} \nPosition=({X}, {Y})";
         }
     }
 }

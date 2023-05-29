@@ -1,0 +1,120 @@
+
+------Ball------ 
+Size=83 
+Color=#CFA642 
+Position=(402, 153)
+
+------Ball------ 
+Size=87 
+Color=#DB0AD1 
+Position=(24, 483)
+
+------Ball------ 
+Size=29 
+Color=#374716 
+Position=(173, 51)
+
+------Ball------ 
+Size=29 
+Color=#36D32B 
+Position=(510, 101)
+
+------Ball------ 
+Size=16 
+Color=#124B65 
+Position=(182, 234)
+
+------Ball------ 
+Size=21 
+Color=#1FDB4A 
+Position=(530, 172)
+
+------Ball------ 
+Size=40 
+Color=#5605B3 
+Position=(13, 414)
+
+------Ball------ 
+Size=85 
+Color=#D5CABD 
+Position=(490, 439)
+
+------Ball------ 
+Size=14 
+Color=#0DF427 
+Position=(591, 91)
+
+------Ball------ 
+Size=99 
+Color=#FEEF57 
+Position=(580, 203)
+
+------Ball------ 
+Size=82 
+Color=#CC63C1 
+Position=(241, 448)
+
+------Ball------ 
+Size=11 
+Color=#048D2B 
+Position=(341, 99)
+
+------Ball------ 
+Size=56 
+Color=#835335 
+Position=(202, 124)
+
+------Ball------ 
+Size=11 
+Color=#031940 
+Position=(62, 149)
+
+------Ball------ 
+Size=97 
+Color=#F8B144 
+Position=(429, 158)
+
+------Ball------ 
+Size=99 
+Color=#FDC202 
+Position=(471, 5)
+
+------Ball------ 
+Size=71 
+Color=#AFA1B7 
+Position=(390, 425)
+
+------Ball------ 
+Size=59 
+Color=#8B19F1 
+Position=(62, 558)
+
+------Ball------ 
+Size=28 
+Color=#357880 
+Position=(291, 297)
+
+------Ball------ 
+Size=73 
+Color=#B43E8B 
+Position=(151, 322)
+
+------Ball------ 
+Size=45 
+Color=#651D41 
+Position=(71, 151)
+
+------Ball------ 
+Size=47 
+Color=#6B2EFE 
+Position=(112, 588)
+
+------Ball------ 
+Size=92 
+Color=#EAF30A 
+Position=(589, 23)
+
+------Ball------ 
+Size=79 
+Color=#C56B43 
+Position=(261, 156)
