@@ -31,8 +31,8 @@
             this.Plus = new System.Windows.Forms.Button();
             this.Minus = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.A = new System.Windows.Forms.Button();
+            this.End_Game = new System.Windows.Forms.Button();
             this.DB = new System.Windows.Forms.Button();
             this.E = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,23 +69,25 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // A
             // 
-            this.button4.Location = new System.Drawing.Point(127, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(32, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.A.Location = new System.Drawing.Point(127, 12);
+            this.A.Name = "A";
+            this.A.Size = new System.Drawing.Size(32, 23);
+            this.A.TabIndex = 3;
+            this.A.Text = "A";
+            this.A.UseVisualStyleBackColor = true;
+            this.A.Click += new System.EventHandler(this.A_Click);
             // 
-            // button5
+            // End_Game
             // 
-            this.button5.Location = new System.Drawing.Point(165, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.End_Game.Location = new System.Drawing.Point(165, 12);
+            this.End_Game.Name = "End_Game";
+            this.End_Game.Size = new System.Drawing.Size(106, 23);
+            this.End_Game.TabIndex = 4;
+            this.End_Game.Text = "End Game";
+            this.End_Game.UseVisualStyleBackColor = true;
+            this.End_Game.Click += new System.EventHandler(this.End_Game_Click);
             // 
             // DB
             // 
@@ -143,8 +145,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.E);
             this.Controls.Add(this.DB);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.End_Game);
+            this.Controls.Add(this.A);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Minus);
             this.Controls.Add(this.Plus);
@@ -160,8 +162,8 @@
         private System.Windows.Forms.Button Plus;
         private System.Windows.Forms.Button Minus;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button A;
+        private System.Windows.Forms.Button End_Game;
         private System.Windows.Forms.Button DB;
         private System.Windows.Forms.Button E;
         private System.Windows.Forms.Label label1;
