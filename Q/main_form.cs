@@ -23,7 +23,7 @@ namespace Q
         public main_form()
         {
             this.ball_count = 0;
-             this.current_user_name = "";
+            this.current_user_name = "";
             InitializeComponent();
         }
 
@@ -46,6 +46,7 @@ namespace Q
         private void Plus_Click(object sender, EventArgs e)
         {
             this.newUserHandle();
+     
             this.addBall();
 
         }
@@ -202,6 +203,11 @@ namespace Q
             {
                 this.Plus_Click(sender, e);
             }
+        }
+
+        private void PaintCircle(object sender, PaintEventArgs e)
+        {
+            e.Graphics
         }
     }
 }
