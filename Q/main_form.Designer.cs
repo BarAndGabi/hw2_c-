@@ -30,7 +30,7 @@
         {
             this.Plus = new System.Windows.Forms.Button();
             this.Minus = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.S = new System.Windows.Forms.Button();
             this.A = new System.Windows.Forms.Button();
             this.End_Game = new System.Windows.Forms.Button();
             this.DB = new System.Windows.Forms.Button();
@@ -60,14 +60,15 @@
             this.Minus.UseVisualStyleBackColor = true;
             this.Minus.Click += new System.EventHandler(this.Minus_Click);
             // 
-            // button3
+            // S
             // 
-            this.button3.Location = new System.Drawing.Point(89, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.S.Location = new System.Drawing.Point(89, 12);
+            this.S.Name = "S";
+            this.S.Size = new System.Drawing.Size(32, 23);
+            this.S.TabIndex = 2;
+            this.S.Text = "S";
+            this.S.UseVisualStyleBackColor = true;
+            this.S.Click += new System.EventHandler(this.S_Click);
             // 
             // A
             // 
@@ -147,7 +148,7 @@
             this.Controls.Add(this.DB);
             this.Controls.Add(this.End_Game);
             this.Controls.Add(this.A);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.S);
             this.Controls.Add(this.Minus);
             this.Controls.Add(this.Plus);
             this.Name = "main_form";
@@ -161,7 +162,7 @@
 
         private System.Windows.Forms.Button Plus;
         private System.Windows.Forms.Button Minus;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button S;
         private System.Windows.Forms.Button A;
         private System.Windows.Forms.Button End_Game;
         private System.Windows.Forms.Button DB;

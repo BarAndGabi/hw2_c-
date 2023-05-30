@@ -68,5 +68,10 @@ namespace hw_2
         {
             return $"\n------Ball------ \nSize={Size} \nColor={Color} \nPosition=({X}, {Y})";
         }
+
+        internal void stop()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

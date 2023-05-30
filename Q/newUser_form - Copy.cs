@@ -24,15 +24,25 @@ namespace Q
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //dialog return ok
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            //name needs to be one char or more 
+            if (this.textBox1.Text.Length < 1)
+            {
+                MessageBox.Show("Name needs to be one char or more");
+            }
+            else
+            {
+                MessageBox.Show("Welcome " + this.textBox1.Text);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+
+            }
+
         }
         private void button2_Click(object sender, EventArgs e)
         {
             //dialog return not  ok
             this.DialogResult = DialogResult.Cancel;
-            MessageBox.Show("No user name was entered");
+            MessageBox.Show("Canceled");
         }
     }
 }

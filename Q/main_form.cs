@@ -52,13 +52,16 @@ namespace Q
 
         private void addBall()
         {
-            this.changeBallsCount(1);
-            //create new ball
-            Ball ball = new Ball(this);
-            //add ball to list
-            this.ball_list.Add(ball);
-            //visualize ball
-            ball.addToDisplay();
+            if (this.current_user_name != "")
+            {
+                this.changeBallsCount(1);
+                //create new ball
+                Ball ball = new Ball(this);
+                //add ball to list
+                this.ball_list.Add(ball);
+                //visualize ball
+                ball.addToDisplay();
+            }
 
         }
         private void removeBall()
@@ -113,7 +116,6 @@ namespace Q
                 {
                     this.current_user_name = new_user.getName();
                     this.label1.Text = "Hello    " + this.current_user_name;
-
                 }
 
             }
@@ -186,6 +188,20 @@ namespace Q
          
             this.about.ShowDialog();
         }
-    
+
+        private void S_Click(object sender, EventArgs e)
+        {
+            //last ball in list 
+            Ball lastBall = this.ball_list[this.ball_count - 1];
+            lastBall.stop();
+        }
+        //function on enter key press
+        private void main_form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.Plus_Click(sender, e);
+            }
+        }
     }
 }
