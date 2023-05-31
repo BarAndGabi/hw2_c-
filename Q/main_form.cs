@@ -1,12 +1,8 @@
 ﻿using hw_2;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using static Q.AboutBox1;
 
@@ -25,6 +21,7 @@ namespace Q
             this.ball_count = 0;
             this.current_user_name = "";
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void DB_Click(object sender, EventArgs e)
@@ -50,6 +47,7 @@ namespace Q
             this.newUserHandle();
             this.addBall();
             this.Refresh();
+
 
         }
 
@@ -119,6 +117,8 @@ namespace Q
         private void Minus_Click(object sender, EventArgs e)
         {
             this.removeBall();
+            this.Refresh();
+
         }
 
         private void printBallList()
@@ -213,11 +213,24 @@ namespace Q
             //foreach ball in list  draw 
             foreach (Ball b in this.ball_list)
             {
+                b.randomizeBall();
                 g.DrawImage(b.ball_image, b.X, b.Y);
             }
 
+           // this.Refresh();
+        }
 
-
+        private void main_form_Load(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
+            timer1.Interval = 10;//5 seconds
+            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Start();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //do whatever you want 
+            this.Refresh();
         }
     }
 }

@@ -30,8 +30,7 @@ namespace Q
                 MessageBox.Show("Name needs to be one char or more");
             }
             else
-            {
-                MessageBox.Show("Welcome " + this.textBox1.Text);
+            { 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
 
