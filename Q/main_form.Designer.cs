@@ -153,6 +153,7 @@
             this.Controls.Add(this.Plus);
             this.Name = "main_form";
             this.Text = "main_form";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.main_form_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

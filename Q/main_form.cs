@@ -18,6 +18,7 @@ namespace Q
         private List<Ball> ball_list = new List<Ball>(); // List of balls
         private string current_user_name; // Current user name
         private AboutBox1 about; // About box form
+        private Graphics g;
 
         public main_form()
         {
@@ -48,6 +49,8 @@ namespace Q
             // Create a new user and add a ball
             this.newUserHandle();
             this.addBall();
+            this.Refresh();
+
         }
 
         private void addBall()
@@ -201,6 +204,20 @@ namespace Q
             {
                 this.Plus_Click(sender, e); // Trigger Plus_Click event
             }
+        }
+
+        private void main_form_Paint(object sender, PaintEventArgs e)
+        {
+            this.g = e.Graphics;
+            
+            //foreach ball in list  draw 
+            foreach (Ball b in this.ball_list)
+            {
+                g.DrawImage(b.ball_image, b.X, b.Y);
+            }
+
+
+
         }
     }
 }
