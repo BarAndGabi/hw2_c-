@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.secondsCounterLabel = new System.Windows.Forms.Label();
+            this.secondsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Plus
@@ -136,11 +138,31 @@
             this.label3.TabIndex = 9;
             this.label3.Text = " ";
             // 
+            // secondsCounterLabel
+            // 
+            this.secondsCounterLabel.AutoSize = true;
+            this.secondsCounterLabel.Location = new System.Drawing.Point(483, 709);
+            this.secondsCounterLabel.Name = "secondsCounterLabel";
+            this.secondsCounterLabel.Size = new System.Drawing.Size(89, 13);
+            this.secondsCounterLabel.TabIndex = 10;
+            this.secondsCounterLabel.Text = "Seconds Counter";
+            // 
+            // secondsLabel
+            // 
+            this.secondsLabel.AutoSize = true;
+            this.secondsLabel.Location = new System.Drawing.Point(515, 739);
+            this.secondsLabel.Name = "secondsLabel";
+            this.secondsLabel.Size = new System.Drawing.Size(10, 13);
+            this.secondsLabel.TabIndex = 11;
+            this.secondsLabel.Text = " ";
+            // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 761);
+            this.Controls.Add(this.secondsLabel);
+            this.Controls.Add(this.secondsCounterLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -173,5 +195,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label secondsCounterLabel;
+        private System.Windows.Forms.Label secondsLabel;
     }
 }

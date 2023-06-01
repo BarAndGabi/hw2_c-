@@ -15,7 +15,10 @@ namespace Q
         private string current_user_name; // Current user name
         private AboutBox1 about; // About box form
         private Graphics g;
-
+        private System.Windows.Forms.Timer animationTimer;
+        //define timer to count time of user    
+        private System.Windows.Forms.Timer userTimer;
+        private int secondsPlayed;//count seconds played by user
         public main_form()
         {
             this.ball_count = 0;
@@ -45,11 +48,12 @@ namespace Q
         {
             // Create a new user and add a ball
             this.newUserHandle();
-            this.addBall();
-            this.Refresh();
+            this.addBall(); 
 
 
         }
+
+  
 
         private void addBall()
         {
@@ -110,6 +114,8 @@ namespace Q
                 {
                     this.current_user_name = new_user.getName(); // Get the name from the form as the new user name
                     this.label1.Text = "Hello    " + this.current_user_name; // Update the label with the new user name
+                    this.secondsPlayed= 0;//initialize seconds played by user
+
                 }
             }
         }
@@ -152,7 +158,7 @@ namespace Q
 
         private void saveToDb()
         {
-            throw new NotImplementedException();
+            
         }
 
         private void A_Click(object sender, EventArgs e)
@@ -222,15 +228,25 @@ namespace Q
 
         private void main_form_Load(object sender, EventArgs e)
         {
-            System.Windows.Forms.Timer timer1 = new System.Windows.Forms.Timer();
-            timer1.Interval = 10;//5 seconds
-            timer1.Tick += new System.EventHandler(timer1_Tick);
-            timer1.Start();
+             this.animationTimer = new System.Windows.Forms.Timer();
+            this.animationTimer.Interval = 200;//200 ms = 0.2 sec
+            this.animationTimer.Tick += new System.EventHandler(timer1_Tick);
+            this.animationTimer.Start();
+            this.userTimer = new System.Windows.Forms.Timer();
+            this.userTimer.Interval = 1000;//1000 ms = 1 sec
+            this.userTimer.Tick += new System.EventHandler(userTimer_Tick);
+            this.userTimer.Start();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
             //do whatever you want 
             this.Refresh();
+        }
+        private void userTimer_Tick(object sender, EventArgs e)
+        {
+            this.secondsPlayed++;
+            if(this.ball_count>0)
+            this.secondsLabel.Text = this.secondsPlayed.ToString();
         }
     }
 }

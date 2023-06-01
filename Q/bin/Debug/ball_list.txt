@@ -1,0 +1,40 @@
+
+------Ball------ 
+Size=39 
+Color=Color [A=255, R=87, G=11, B=92] 
+Position=(6, 122)
+
+------Ball------ 
+Size=24 
+Color=Color [A=255, R=64, G=140, B=119] 
+Position=(313, 121)
+
+------Ball------ 
+Size=31 
+Color=Color [A=255, R=10, G=114, B=118] 
+Position=(506, 696)
+
+------Ball------ 
+Size=31 
+Color=Color [A=255, R=243, G=130, B=124] 
+Position=(379, 731)
+
+------Ball------ 
+Size=18 
+Color=Color [A=255, R=107, G=226, B=211] 
+Position=(246, 293)
+
+------Ball------ 
+Size=13 
+Color=Color [A=255, R=180, G=238, B=47] 
+Position=(413, 470)
+
+------Ball------ 
+Size=21 
+Color=Color [A=255, R=7, G=17, B=34] 
+Position=(353, 645)
+
+------Ball------ 
+Size=15 
+Color=Color [A=255, R=110, G=126, B=56] 
+Position=(123, 519)
