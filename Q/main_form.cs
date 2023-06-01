@@ -230,14 +230,14 @@ namespace Q
         {
              this.animationTimer = new System.Windows.Forms.Timer();
             this.animationTimer.Interval = 200;//200 ms = 0.2 sec
-            this.animationTimer.Tick += new System.EventHandler(timer1_Tick);
+            this.animationTimer.Tick += new System.EventHandler(animationTimer_Tick);
             this.animationTimer.Start();
             this.userTimer = new System.Windows.Forms.Timer();
             this.userTimer.Interval = 1000;//1000 ms = 1 sec
             this.userTimer.Tick += new System.EventHandler(userTimer_Tick);
             this.userTimer.Start();
         }
-        private void timer1_Tick(object sender, EventArgs e)
+        private void animationTimer_Tick(object sender, EventArgs e)
         {
             //do whatever you want 
             this.Refresh();
