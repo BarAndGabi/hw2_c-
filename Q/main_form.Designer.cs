@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.secondsCounterLabel = new System.Windows.Forms.Label();
+            this.secondsLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Plus
@@ -121,7 +123,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(502, 9);
+            this.label2.Location = new System.Drawing.Point(494, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 8;
@@ -130,17 +132,37 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(534, 31);
+            this.label3.Location = new System.Drawing.Point(526, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = " ";
             // 
+            // secondsCounterLabel
+            // 
+            this.secondsCounterLabel.AutoSize = true;
+            this.secondsCounterLabel.Location = new System.Drawing.Point(483, 709);
+            this.secondsCounterLabel.Name = "secondsCounterLabel";
+            this.secondsCounterLabel.Size = new System.Drawing.Size(89, 13);
+            this.secondsCounterLabel.TabIndex = 10;
+            this.secondsCounterLabel.Text = "Seconds Counter";
+            // 
+            // secondsLabel
+            // 
+            this.secondsLabel.AutoSize = true;
+            this.secondsLabel.Location = new System.Drawing.Point(515, 739);
+            this.secondsLabel.Name = "secondsLabel";
+            this.secondsLabel.Size = new System.Drawing.Size(10, 13);
+            this.secondsLabel.TabIndex = 11;
+            this.secondsLabel.Text = " ";
+            // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(601, 551);
+            this.ClientSize = new System.Drawing.Size(584, 761);
+            this.Controls.Add(this.secondsLabel);
+            this.Controls.Add(this.secondsCounterLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -152,8 +174,10 @@
             this.Controls.Add(this.Minus);
             this.Controls.Add(this.Plus);
             this.Name = "main_form";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "main_form";
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.PaintCircle);
+            this.Load += new System.EventHandler(this.main_form_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.main_form_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +195,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label secondsCounterLabel;
+        private System.Windows.Forms.Label secondsLabel;
     }
 }
