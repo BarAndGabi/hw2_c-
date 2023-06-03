@@ -19,6 +19,7 @@ namespace Q
         //define timer to count time of user    
         private System.Windows.Forms.Timer userTimer;
         private int secondsPlayed;//count seconds played by user
+        private DB_form db; // DB form
         public main_form()
         {
             this.ball_count = 0;
@@ -30,7 +31,7 @@ namespace Q
         private void DB_Click(object sender, EventArgs e)
         {
             // Open DB form
-            DB_form db = new DB_form();
+            this.db = new DB_form();
             db.ShowDialog();
         }
 
@@ -48,12 +49,12 @@ namespace Q
         {
             // Create a new user and add a ball
             this.newUserHandle();
-            this.addBall(); 
+            this.addBall();
 
 
         }
 
-  
+
 
         private void addBall()
         {
@@ -97,6 +98,7 @@ namespace Q
                 case -1:
                     this.ball_count--; // Decrement ball count
                     this.label3.Text = this.ball_count.ToString(); // Update the label with the new ball count
+                    this.saveToDb();
                     break;
                 default:
                     throw new Exception("invalid choice");
@@ -114,7 +116,7 @@ namespace Q
                 {
                     this.current_user_name = new_user.getName(); // Get the name from the form as the new user name
                     this.label1.Text = "Hello    " + this.current_user_name; // Update the label with the new user name
-                    this.secondsPlayed= 0;//initialize seconds played by user
+                    this.secondsPlayed = 0;//initialize seconds played by user
 
                 }
             }
@@ -145,6 +147,7 @@ namespace Q
 
         private void restartGame()
         {
+            this.saveToDb();
             // Delete all balls and reset ball count
             while (this.ball_count > 0)
             {
@@ -158,7 +161,8 @@ namespace Q
 
         private void saveToDb()
         {
-            
+            this.db = new DB_form();
+            this.db.addToDB(this.current_user_name, this.secondsPlayed);
         }
 
         private void A_Click(object sender, EventArgs e)
@@ -215,7 +219,7 @@ namespace Q
         private void main_form_Paint(object sender, PaintEventArgs e)
         {
             this.g = e.Graphics;
-            
+
             //foreach ball in list  draw 
             foreach (Ball b in this.ball_list)
             {
@@ -223,12 +227,12 @@ namespace Q
                 g.DrawImage(b.ball_image, b.X, b.Y);
             }
 
-           // this.Refresh();
+            // this.Refresh();
         }
 
         private void main_form_Load(object sender, EventArgs e)
         {
-             this.animationTimer = new System.Windows.Forms.Timer();
+            this.animationTimer = new System.Windows.Forms.Timer();
             this.animationTimer.Interval = 200;//200 ms = 0.2 sec
             this.animationTimer.Tick += new System.EventHandler(animationTimer_Tick);
             this.animationTimer.Start();
@@ -245,8 +249,8 @@ namespace Q
         private void userTimer_Tick(object sender, EventArgs e)
         {
             this.secondsPlayed++;
-            if(this.ball_count>0)
-            this.secondsLabel.Text = this.secondsPlayed.ToString();
+            if (this.ball_count > 0)
+                this.secondsLabel.Text = this.secondsPlayed.ToString();
         }
     }
 }
