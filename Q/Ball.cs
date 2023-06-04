@@ -18,6 +18,7 @@ namespace hw_2
         public int Y { get; set; }
         private Form main;
         public Bitmap ball_image { get; set; }
+        private bool stopSwitch = false;
 
         // Constructor
   
@@ -61,11 +62,14 @@ namespace hw_2
         }
         public void randomizeBall()
         {
-            this.R = GenerateComplexRand(10, 40);
-            this.randomColor();
-            this.X = GenerateComplexRand(0, main.Width);
-            this.generaterandomXY(); 
-            this.generateBallImage();
+            if (this.stopSwitch==false)
+            {
+                this.R = GenerateComplexRand(10, 40);
+                this.randomColor();
+                this.X = GenerateComplexRand(0, main.Width);
+                this.generaterandomXY();
+                this.generateBallImage();
+            }
         }
         public void generaterandomXY()
         {
@@ -108,7 +112,16 @@ namespace hw_2
 
         internal void stop()
         {
-            throw new NotImplementedException();
+            if(this.stopSwitch == false)
+            this.stopSwitch = true;
+            else
+            {
+                this.start();
+            }
+        }
+        internal void start()
+        {
+            this.stopSwitch = false;
         }
 
         internal PointF getPoint()

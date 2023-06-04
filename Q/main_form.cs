@@ -71,9 +71,14 @@ namespace Q
         {
             if (this.ball_count > 0)
             {
+                if (this.ball_count == 1)
+                {
+                    this.saveToDb(); // Save to DB if ball count is 1
+                }
                 ball_list[this.ball_count - 1].removeFromDisplay(); // Remove the last ball from display
                 this.ball_list.RemoveAt(this.ball_count - 1); // Remove the last ball from the list
                 changeBallsCount(-1); // Decrease ball count
+
             }
             else if (this.ball_count == 0)
             {
@@ -98,7 +103,6 @@ namespace Q
                 case -1:
                     this.ball_count--; // Decrement ball count
                     this.label3.Text = this.ball_count.ToString(); // Update the label with the new ball count
-                    this.saveToDb();
                     break;
                 default:
                     throw new Exception("invalid choice");
