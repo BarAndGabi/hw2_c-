@@ -16,6 +16,8 @@ namespace hw_2
         public Color color { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
+        private int skipX { get; set; }
+        private int skipY { get; set; }
         private Form main;
         public Bitmap ball_image { get; set; }
         private bool stopSwitch = false;
@@ -26,15 +28,50 @@ namespace hw_2
         {
             this.main = main;
             this.randomizeBall();
+            this.generaterandomXY();
             this.generateBallImage();
                 }
 
     
         // Methods
-        public void Move(int deltaX, int deltaY)
+        public void Move()
         {
-            X += deltaX;
-            Y += deltaY;
+            //if stop switch is on stop moving
+            if (this.stopSwitch == true)
+            {
+                return;
+            }
+            //if ball is out of bounds randomize ball
+            if (this.X + this.R + this.skipX > main.Width || this.Y + this.R + this.skipY > main.Height || this.X < 0 || this.Y < 0)
+            {
+                this.randomizeBall();
+            }
+            // Check if the ball tocuhes the right border
+            if (this.X + this.R + this.skipX > main.Width)
+            {
+                this.skipX = -this.skipX;
+            }
+            // Check if the ball touches the left border
+            if (this.X - this.R + this.skipX < 0)
+            {
+                this.skipX = -this.skipX;
+            }
+            // Check if the ball touches the bottom border
+            if (this.Y + this.R + this.skipY > main.Height)
+            {
+                this.skipY = -this.skipY;
+            }
+            // Check if the ball touches the top border
+            if (this.Y - this.R + this.skipY < 0)
+            {
+                this.skipY = -this.skipY;
+            }
+            // Move the ball
+            this.X += this.skipX;
+            this.Y += this.skipY;
+            
+           
+
         }
         //generate random with new random seed
         int GenerateComplexRand(int minValue, int maxValue)
@@ -64,10 +101,11 @@ namespace hw_2
         {
             if (this.stopSwitch==false)
             {
+                this.skipX = GenerateComplexRand(1, 5);
+                this.skipY = GenerateComplexRand(1, 5);
                 this.R = GenerateComplexRand(10, 40);
                 this.randomColor();
-                this.X = GenerateComplexRand(0, main.Width);
-                this.generaterandomXY();
+               // this.generaterandomXY();
                 this.generateBallImage();
             }
         }

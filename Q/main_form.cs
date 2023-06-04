@@ -151,7 +151,7 @@ namespace Q
 
         private void restartGame()
         {
-            this.saveToDb();
+            //this.saveToDb();
             // Delete all balls and reset ball count
             while (this.ball_count > 0)
             {
@@ -227,7 +227,7 @@ namespace Q
             //foreach ball in list  draw 
             foreach (Ball b in this.ball_list)
             {
-                b.randomizeBall();
+                b.Move();
                 g.DrawImage(b.ball_image, b.X, b.Y);
             }
 
@@ -237,7 +237,7 @@ namespace Q
         private void main_form_Load(object sender, EventArgs e)
         {
             this.animationTimer = new System.Windows.Forms.Timer();
-            this.animationTimer.Interval = 200;//200 ms = 0.2 sec
+            this.animationTimer.Interval = 150;//150 ms = 0.15 sec
             this.animationTimer.Tick += new System.EventHandler(animationTimer_Tick);
             this.animationTimer.Start();
             this.userTimer = new System.Windows.Forms.Timer();
