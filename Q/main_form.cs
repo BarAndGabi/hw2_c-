@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using static Q.AboutBox1;
@@ -26,13 +27,66 @@ namespace Q
             this.current_user_name = "";
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-        }
+            //set function on form closing
+            this.FormClosing += new FormClosingEventHandler(main_form_FormClosing);
+            this.styleForm();
 
-        private void DB_Click(object sender, EventArgs e)
+        }
+        private void main_form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //save to DB when closing the form
+            this.saveToDb();
+        }
+            private void DB_Click(object sender, EventArgs e)
         {
             // Open DB form
             this.db = new DB_form();
             db.ShowDialog();
+        }
+        private void styleForm()
+        {
+            // Set the form's background color to a dark color
+            this.BackColor = Color.FromArgb(33, 33, 33); // Dark gray color
+
+            // Define the primary and secondary colors
+            Color primaryColor = Color.White;
+            Color secondaryColor = Color.FromArgb(45, 45, 45); // Darker gray color
+
+            // Set the font and styles for labels and buttons
+            Font labelFont = new Font("Segoe UI", 12, FontStyle.Bold);
+            Font buttonFont = new Font("Segoe UI", 10, FontStyle.Bold);
+            FontStyle labelStyle = FontStyle.Bold;
+            FontStyle buttonStyle = FontStyle.Bold;
+
+            // Update the foreground colors and fonts of labels
+            this.label1.ForeColor = primaryColor;
+            this.label1.Font = labelFont;
+            this.label1.Font = new Font(this.label1.Font, labelStyle);
+            this.label3.ForeColor = primaryColor;
+            this.label3.Font = labelFont;
+            this.label3.Font = new Font(this.label3.Font, labelStyle);
+
+            // Update the foreground colors and fonts of buttons
+            foreach (Button button in this.Controls.OfType<Button>())
+            {
+                button.ForeColor = primaryColor;
+                button.BackColor = secondaryColor;
+                button.Font = buttonFont;
+                button.Font = new Font(button.Font, buttonStyle);
+                button.FlatStyle = FlatStyle.Flat;
+                button.FlatAppearance.BorderSize = 0;
+                button.FlatAppearance.MouseOverBackColor = Color.FromArgb(60, secondaryColor);
+                button.FlatAppearance.MouseDownBackColor = Color.FromArgb(80, secondaryColor);
+            }
+
+            // Modify the appearance of controls
+            foreach (Control control in this.Controls)
+            {
+                if (control is Label || control is Button)
+                {
+                    control.BackColor = secondaryColor;
+                }
+            }
         }
 
         private void E_Click(object sender, EventArgs e)
@@ -255,6 +309,16 @@ namespace Q
             this.secondsPlayed++;
             if (this.ball_count > 0)
                 this.secondsLabel.Text = this.secondsPlayed.ToString();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
