@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
@@ -22,9 +23,11 @@ namespace hw_2
         private Form main;
         public Bitmap ball_image { get; set; }
         private bool stopSwitch = false;
+        //diraction vector of ball EXAMPLE : (-1,1) means ball moves -1*skipx and 1*skipy
+        public Point diractionVector { get; set; }
 
         // Constructor
-  
+
         public Ball(Form main)
         {
             this.main = main;
@@ -32,6 +35,7 @@ namespace hw_2
             this.generaterandomXY();
             this.generateBallImage();
             this.randomBallOffset = 1.15;
+            this.diractionVector = new Point(1, 1);
                 }
 
     
@@ -45,37 +49,107 @@ namespace hw_2
             }
           
             // Check if the ball tocuhes the right border
-            if (this.X + 2*this.R  > main.Width)
+            if (this.X + 2*this.R  > main.Width-10)
             {
                 this.randomizeBall();
-                this.skipX = -this.skipX;
+                this.borderHandle('R');
+               
 
             }
             // Check if the ball tocuhes the left border
             if (this.X < 0)
             {
                 this.randomizeBall();
-                this.skipX = -this.skipX;
+                this.borderHandle('L');
+
             }
             // Check if the ball tocuhes the bottom border
-            if (this.Y + 2*this.R > main.Height)
+            if (this.Y +2*this.R > main.Height-10)
             {
                 this.randomizeBall();
-                this.skipY = -this.skipY;
+               this.borderHandle('D');
             }
             // Check if the ball tocuhes the top border
             if (this.Y < 0)
             {
                 this.randomizeBall();
-                this.skipY = -this.skipY;
+                this.borderHandle('U');
             }
 
             this.X += this.skipX;
-            this.Y -= this.skipY;
+            this.Y += this.skipY;
             
            
 
         }
+
+        private void borderHandle(char v)
+        {
+            switch (v)
+            {
+                case 'L':
+                   // if ball was moving up and left border was hit ball will move up and right
+                   if(this.diractionVector.X == -1 && this.diractionVector.Y == -1)
+                    {
+                        this.diractionVector= new Point(1, -1);
+                    }
+                   // if ball was moving down and left border was hit ball will move down and right
+                   else if (this.diractionVector.X == -1 && this.diractionVector.Y == 1)
+                    {
+                            this.diractionVector = new Point(1, 1);
+                      }
+                    break;
+                case 'R':
+                    // if ball was moving up and Right border was hit ball will move up and LEFT
+                    if (this.diractionVector.X == 1 && this.diractionVector.Y == -1)
+                    {
+                        this.diractionVector = new Point(-1, -1);
+                    }
+                    // if ball was moving down and Right border was hit ball will move down and LEFT
+                    else if (this.diractionVector.X == 1 && this.diractionVector.Y == 1)
+                    {
+                        this.diractionVector = new Point(-1, 1);
+                    }
+                    break;
+                case 'U':
+                    // if ball was moving left and top border was hit ball will move left and down
+                    if (this.diractionVector.X == -1 && this.diractionVector.Y == -1)
+                    {
+                        this.diractionVector = new Point(-1, 1);
+                    }
+                    // if ball was moving right and top border was hit ball will move right and down
+                    else if (this.diractionVector.X == 1 && this.diractionVector.Y == -1)
+                    {
+                        this.diractionVector = new Point(1, 1);
+                    }
+                    break;
+                case 'D':
+                    // if ball was moving left and bottom border was hit ball will move left and up
+                    if (this.diractionVector.X == -1 && this.diractionVector.Y == 1)
+                    {
+                        this.diractionVector = new Point(-1, -1);
+                    }
+                    // if ball was moving right and bottom border was hit ball will move right and up
+                    else if (this.diractionVector.X == 1 && this.diractionVector.Y == 1)
+                    {
+                        this.diractionVector = new Point(1, -1);
+                    }
+                    break;
+                default:
+                    break;
+            }
+            //change direction
+            this.skipX = this.skipX * this.diractionVector.X;
+            this.skipY = this.skipY * this.diractionVector.Y;
+        }
+
+        private void changeDirection()
+        {
+            //4 states of direction vector
+          
+
+        }
+
         //generate random with new random seed
         int GenerateComplexRand(int minValue, int maxValue)
         {

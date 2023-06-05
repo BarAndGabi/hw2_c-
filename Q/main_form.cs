@@ -21,10 +21,12 @@ namespace Q
         private System.Windows.Forms.Timer userTimer;
         private int secondsPlayed;//count seconds played by user
         private DB_form db; // DB form
+       
         public main_form()
         {
             this.ball_count = 0;
             this.current_user_name = "";
+            
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             //set function on form closing
@@ -291,7 +293,7 @@ namespace Q
         private void main_form_Load(object sender, EventArgs e)
         {
             this.animationTimer = new System.Windows.Forms.Timer();
-            this.animationTimer.Interval = 150;//150 ms = 0.15 sec
+            this.animationTimer.Interval = 50;//150 ms = 0.15 sec
             this.animationTimer.Tick += new System.EventHandler(animationTimer_Tick);
             this.animationTimer.Start();
             this.userTimer = new System.Windows.Forms.Timer();
