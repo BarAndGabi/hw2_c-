@@ -44,10 +44,9 @@
             // 
             // Plus
             // 
-            this.Plus.Location = new System.Drawing.Point(41, 34);
-            this.Plus.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.Plus.Location = new System.Drawing.Point(13, 12);
             this.Plus.Name = "Plus";
-            this.Plus.Size = new System.Drawing.Size(101, 65);
+            this.Plus.Size = new System.Drawing.Size(32, 23);
             this.Plus.TabIndex = 0;
             this.Plus.Text = "+";
             this.Plus.UseVisualStyleBackColor = true;
@@ -55,10 +54,9 @@
             // 
             // Minus
             // 
-            this.Minus.Location = new System.Drawing.Point(162, 34);
-            this.Minus.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.Minus.Location = new System.Drawing.Point(51, 12);
             this.Minus.Name = "Minus";
-            this.Minus.Size = new System.Drawing.Size(101, 65);
+            this.Minus.Size = new System.Drawing.Size(32, 23);
             this.Minus.TabIndex = 1;
             this.Minus.Text = "-";
             this.Minus.UseVisualStyleBackColor = true;
@@ -66,10 +64,9 @@
             // 
             // S
             // 
-            this.S.Location = new System.Drawing.Point(282, 34);
-            this.S.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.S.Location = new System.Drawing.Point(89, 12);
             this.S.Name = "S";
-            this.S.Size = new System.Drawing.Size(101, 65);
+            this.S.Size = new System.Drawing.Size(32, 23);
             this.S.TabIndex = 2;
             this.S.Text = "S";
             this.S.UseVisualStyleBackColor = true;
@@ -77,10 +74,9 @@
             // 
             // A
             // 
-            this.A.Location = new System.Drawing.Point(402, 34);
-            this.A.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.A.Location = new System.Drawing.Point(127, 12);
             this.A.Name = "A";
-            this.A.Size = new System.Drawing.Size(101, 65);
+            this.A.Size = new System.Drawing.Size(32, 23);
             this.A.TabIndex = 3;
             this.A.Text = "A";
             this.A.UseVisualStyleBackColor = true;
@@ -88,10 +84,9 @@
             // 
             // End_Game
             // 
-            this.End_Game.Location = new System.Drawing.Point(522, 34);
-            this.End_Game.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.End_Game.Location = new System.Drawing.Point(165, 12);
             this.End_Game.Name = "End_Game";
-            this.End_Game.Size = new System.Drawing.Size(336, 65);
+            this.End_Game.Size = new System.Drawing.Size(106, 23);
             this.End_Game.TabIndex = 4;
             this.End_Game.Text = "End Game";
             this.End_Game.UseVisualStyleBackColor = true;
@@ -99,10 +94,9 @@
             // 
             // DB
             // 
-            this.DB.Location = new System.Drawing.Point(877, 34);
-            this.DB.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.DB.Location = new System.Drawing.Point(277, 12);
             this.DB.Name = "DB";
-            this.DB.Size = new System.Drawing.Size(101, 65);
+            this.DB.Size = new System.Drawing.Size(32, 23);
             this.DB.TabIndex = 5;
             this.DB.Text = "DB";
             this.DB.UseVisualStyleBackColor = true;
@@ -110,10 +104,9 @@
             // 
             // E
             // 
-            this.E.Location = new System.Drawing.Point(998, 34);
-            this.E.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.E.Location = new System.Drawing.Point(315, 12);
             this.E.Name = "E";
-            this.E.Size = new System.Drawing.Size(101, 65);
+            this.E.Size = new System.Drawing.Size(32, 23);
             this.E.TabIndex = 6;
             this.E.Text = "E";
             this.E.UseVisualStyleBackColor = true;
@@ -122,19 +115,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1118, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label1.Location = new System.Drawing.Point(353, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 37);
+            this.label1.Size = new System.Drawing.Size(0, 13);
             this.label1.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1564, 26);
-            this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label2.Location = new System.Drawing.Point(266, 337);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 37);
+            this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "number of balls : ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -142,10 +133,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1666, 88);
-            this.label3.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.label3.Location = new System.Drawing.Point(305, 359);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 37);
+            this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = " ";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -153,28 +143,26 @@
             // secondsCounterLabel
             // 
             this.secondsCounterLabel.AutoSize = true;
-            this.secondsCounterLabel.Location = new System.Drawing.Point(1530, 2018);
-            this.secondsCounterLabel.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.secondsCounterLabel.Location = new System.Drawing.Point(10, 337);
             this.secondsCounterLabel.Name = "secondsCounterLabel";
-            this.secondsCounterLabel.Size = new System.Drawing.Size(264, 37);
+            this.secondsCounterLabel.Size = new System.Drawing.Size(89, 13);
             this.secondsCounterLabel.TabIndex = 10;
             this.secondsCounterLabel.Text = "Seconds Counter";
             // 
             // secondsLabel
             // 
             this.secondsLabel.AutoSize = true;
-            this.secondsLabel.Location = new System.Drawing.Point(1631, 2103);
-            this.secondsLabel.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.secondsLabel.Location = new System.Drawing.Point(48, 359);
             this.secondsLabel.Name = "secondsLabel";
-            this.secondsLabel.Size = new System.Drawing.Size(26, 37);
+            this.secondsLabel.Size = new System.Drawing.Size(10, 13);
             this.secondsLabel.TabIndex = 11;
             this.secondsLabel.Text = " ";
             // 
             // main_form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1849, 1061);
+            this.ClientSize = new System.Drawing.Size(363, 385);
             this.Controls.Add(this.secondsLabel);
             this.Controls.Add(this.secondsCounterLabel);
             this.Controls.Add(this.label3);
@@ -187,7 +175,6 @@
             this.Controls.Add(this.S);
             this.Controls.Add(this.Minus);
             this.Controls.Add(this.Plus);
-            this.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.Name = "main_form";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "main_form";

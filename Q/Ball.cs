@@ -16,6 +16,7 @@ namespace hw_2
         public Color color { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
+        private double randomBallOffset { get; set; }
         private int skipX { get; set; }
         private int skipY { get; set; }
         private Form main;
@@ -30,6 +31,7 @@ namespace hw_2
             this.randomizeBall();
             this.generaterandomXY();
             this.generateBallImage();
+            this.randomBallOffset = 1.15;
                 }
 
     
@@ -41,34 +43,35 @@ namespace hw_2
             {
                 return;
             }
-            //if ball is out of bounds randomize ball
-            if (this.X + this.R + this.skipX > main.Width || this.Y + this.R + this.skipY > main.Height || this.X < 0 || this.Y < 0)
+          
+            // Check if the ball tocuhes the right border
+            if (this.X + 2*this.R  > main.Width)
             {
                 this.randomizeBall();
+                this.skipX = -this.skipX;
+
             }
-            // Check if the ball tocuhes the right border
-            if (this.X + this.R + this.skipX > main.Width)
+            // Check if the ball tocuhes the left border
+            if (this.X < 0)
             {
+                this.randomizeBall();
                 this.skipX = -this.skipX;
             }
-            // Check if the ball touches the left border
-            if (this.X - this.R + this.skipX < 0)
+            // Check if the ball tocuhes the bottom border
+            if (this.Y + 2*this.R > main.Height)
             {
-                this.skipX = -this.skipX;
-            }
-            // Check if the ball touches the bottom border
-            if (this.Y + this.R + this.skipY > main.Height)
-            {
+                this.randomizeBall();
                 this.skipY = -this.skipY;
             }
-            // Check if the ball touches the top border
-            if (this.Y - this.R + this.skipY < 0)
+            // Check if the ball tocuhes the top border
+            if (this.Y < 0)
             {
+                this.randomizeBall();
                 this.skipY = -this.skipY;
             }
-            // Move the ball
+
             this.X += this.skipX;
-            this.Y += this.skipY;
+            this.Y -= this.skipY;
             
            
 
@@ -102,8 +105,8 @@ namespace hw_2
             if (this.stopSwitch==false)
             {
                 this.skipX = GenerateComplexRand(1, 5);
-                this.skipY = GenerateComplexRand(1, 5);
-                this.R = GenerateComplexRand(10, 40);
+                this.skipY = this.skipX;
+                this.R = GenerateComplexRand(5, 20);
                 this.randomColor();
                // this.generaterandomXY();
                 this.generateBallImage();
